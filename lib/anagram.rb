@@ -5,14 +5,13 @@ class Anagram
   @@all = []
 
   def initialize(word)
-    @word = word.split(//).sort.join("")
+    @word = word.chars.sort
   end
 
   def match(array)
     @@all.clear
     array.each do |word_element|
-      x = word_element.split(//).sort.join("")
-      @@all << word_element if x == @word
+      @@all << word_element if word_element.chars.sort == @word
     end
     @@all
   end
