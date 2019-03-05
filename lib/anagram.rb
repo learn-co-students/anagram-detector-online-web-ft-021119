@@ -12,6 +12,10 @@ class Anagram
     split_word = @word.split("").sort # ["a", "d", "e", "i", "p", "r"]
                                       # @word.match(%w(array))
                                       # (element.split("").sort)
+    for array.collect do |element|
+      element.split("").sort
+    end
+    binding.pry
   end
 end
                                       # An example:
